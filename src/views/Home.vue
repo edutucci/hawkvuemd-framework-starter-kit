@@ -1,18 +1,19 @@
 <template>
-  <div class="home">
-    <img alt="Vue logo" src="../assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <div class="full-width flex flex-justify-center flex-items-center" style="min-height: calc(100vh - 126px)">
+    <div class="flex flex-column">
+      <div class="text-center">
+        <img alt="Vue logo" src="../assets/logo.png">
+      </div>
+      <div>
+        <h1>Welcome to hawkframework</h1>
+      </div>
+    </div>
   </div>
 </template>
 
 <script>
-// @ is an alias to /src
-import HelloWorld from '@/components/HelloWorld.vue'
 
 export default {
-  name: 'home',
-  components: {
-    HelloWorld
-  }
+  name: 'home'
 }
 </script>

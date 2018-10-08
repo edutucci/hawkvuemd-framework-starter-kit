@@ -1,170 +1,38 @@
-<template>
-  <div>
-    <h1>Collapsible</h1>
+<template lang="pug">
+  h-page
+    h-page-header(fixed)
+      h-app-toolbar
+        h-app-toolbar-container(bgcolor="bg-primary" textcolor="text-white")
+          h-app-toolbar-navigation(icon="fas fa-bars" textcolor="text-white" @click="$refs.nav.open()")
+          h-app-toolbar-title(title="HawkFramework")
+          h-app-toolbar-action
+            router-link(to="/yourpage")
+              h-fa-icon(icon="fas fa-globe" textcolor="text-white")
+            a(href='https://github.com/edutucci/hawkframework' target="_blank")
+              h-fa-icon(icon="fab fa-github" textcolor="text-white")
 
-    <h-collapsible>
-      <h-collapsible-menu icon="fas fa-film" text="Attractions">
-        <h-collapsible-item text="Shopping"></h-collapsible-item>
-        <h-collapsible-item text="Museum"></h-collapsible-item>
-      </h-collapsible-menu>
-      <h-collapsible-menu icon="fas fa-utensils" text="Dining">
-        <h-collapsible-item text="Restaurants"></h-collapsible-item>
-      </h-collapsible-menu>
-    </h-collapsible>
+    h-page-content(style="margin-top: 62px; margin-bottom: 62px;")
+      router-view
 
-    <pre v-highlightjs="ex1">
-      <code class="html">
-      </code>
-    </pre>
-
-    <h1>Collapsible Custom Color</h1>
-
-    <h-collapsible>
-      <h-collapsible-menu icon="fa fa-film" text="Attractions" bgcolor="bg-primary" textcolor="text-white">
-        <h-collapsible-item text="Shopping" bgcolor="bg-primary" textcolor="text-white"></h-collapsible-item>
-        <h-collapsible-item text="Museum" bgcolor="bg-primary" textcolor="text-white"></h-collapsible-item>
-      </h-collapsible-menu>
-      <h-collapsible-menu icon="fas fa-utensils" text="Dining" bgcolor="bg-primary" textcolor="text-white">
-        <h-collapsible-item text="Restaurants" bgcolor="bg-primary" textcolor="text-white"></h-collapsible-item>
-      </h-collapsible-menu>
-    </h-collapsible>
-
-    <pre v-highlightjs="ex2">
-      <code class="html">
-      </code>
-    </pre>
-
-    <h1>Collapsible Custom Content</h1>
-
-    <h-collapsible>
-      <h-collapsible-menu icon="fa fa-film" text="Letter">
-        <div class="flex flex-items-center flex-justify-center">
-          <div>
-            <h-avatar src="img/hawk.png" size="64px"/>
-          </div>
-          <div>
-            <h1>Free Framework CSS</h1>
-          </div>
-        </div>
-      </h-collapsible-menu>
-      <h-collapsible-menu icon="fas fa-utensils" text="Dining">
-        <div class="flex flex-items-center flex-justify-center">
-          <div>
-            <h-avatar src="img/icons/mstile-150x150.png" size="64px"/>
-          </div>
-          <div>
-            <h1>Vue JS</h1>
-          </div>
-        </div>
-      </h-collapsible-menu>
-    </h-collapsible>
-
-    <pre v-highlightjs="ex3">
-      <code class="html">
-      </code>
-    </pre>
-
-    <h2 class="text-primary"> Collapsible Menu Help</h2>
-    <h2 class="text-primary"> Vue Properties</h2>
-    <hr>
-
-    <div class="flex">
-      <div>
-        <h3>Name</h3>
-        <div>bgcolor</div>
-        <div>textcolor</div>
-        <div>icon</div>
-        <div>text</div>
-      </div>
-      <div class="h-pl-md">
-        <h3>Type</h3>
-        <div>String</div>
-        <div>String</div>
-        <div>Array</div>
-        <div>String</div>
-      </div>
-      <div class="h-pl-md">
-        <h3 >Description</h3>
-        <div>Sets the background color of the menu</div>
-        <div>Sets the text color of the menu</div>
-        <div>Sets the icon of the menu</div>
-        <div>Sets the text of the menu</div>
-      </div>
-    </div>
-
-    <h2 class="text-primary"> Collapsible Menu Item Help</h2>
-    <h2 class="text-primary"> Vue Properties</h2>
-    <hr>
-
-    <div class="flex">
-      <div>
-        <h3>Name</h3>
-        <div>text</div>
-      </div>
-      <div class="h-pl-md">
-        <h3>Type</h3>
-        <div>String</div>
-      </div>
-      <div class="h-pl-md">
-        <h3 >Description</h3>
-        <div>Sets the text of the menu item</div>
-
-      </div>
-    </div>
-
-  </div>
+    h-page-footer(fixed)
+      .flex.flex-justify-center.flex-items-center.bg-primary.text-white(style="height: 60px")
+        H3 HawkFramework Page Footer
 </template>
 
 <script>
 export default {
   data () {
     return {
-      ex1: `
-<h-collapsible>
-  <h-collapsible-menu :icon="['fas', 'film']" text="Attractions">
-    <h-collapsible-item text="Shopping"></h-collapsible-item>
-    <h-collapsible-item text="Museum"></h-collapsible-item>
-  </h-collapsible-menu>
-  <h-collapsible-menu :icon="['fas', 'utensils']" text="Dining">
-    <h-collapsible-item text="Restaurants"></h-collapsible-item>
-  </h-collapsible-menu>
-</h-collapsible>
-      `,
-      ex2: `
-<h-collapsible>
-  <h-collapsible-menu :icon="['fas', 'film']" text="Attractions" bgcolor="bg-primary" textcolor="text-white">
-    <h-collapsible-item text="Shopping" bgcolor="bg-primary" textcolor="text-white"></h-collapsible-item>
-    <h-collapsible-item text="Museum" bgcolor="bg-primary" textcolor="text-white"></h-collapsible-item>
-  </h-collapsible-menu>
-  <h-collapsible-menu :icon="['fas', 'utensils']" text="Dining" bgcolor="bg-primary" textcolor="text-white">
-    <h-collapsible-item text="Restaurants" bgcolor="bg-primary" textcolor="text-white"></h-collapsible-item>
-  </h-collapsible-menu>
-</h-collapsible>
-      `,
-      ex3: `
-<h-collapsible>
-  <h-collapsible-menu :icon="['fas', 'film']" text="Letter">
-    <div class="flex flex-items-center flex-justify-center">
-      <div>
-        <h-avatar src="img/hawk.png" size="64px"/>
-      </div>
-      <div>
-        <h1>Free Framework CSS</h1>
-      </div>
-    </div>
-  </h-collapsible-menu>
-  <h-collapsible-menu :icon="['fas', 'utensils']" text="Dining">
-    <div class="flex flex-items-center flex-justify-center">
-      <div>
-        <h-avatar src="img/icons/mstile-150x150.png" size="64px"/>
-      </div>
-      <div>
-        <h1>Vue JS</h1>
-      </div>
-    </div>
-  </h-collapsible-menu>
-</h-collapsible>
-      `
+      options: []
+    }
+  },
+  methods: {
+    onSearch (query) {
+      // console.log('veio a query: ' + query)
+      this.options = []
+      this.options.push({ avatar: 'avatar/turtle.png', text: 'Ninja Turtle', desc: 'I kill you' })
+      this.options.push({ img: 'avatar/folder_open.jpeg', text: 'Photos', desc: 'Dez 12, 2017' })
+      this.options.push({ icon: 'fas fa-volleyball-ball', text: 'Attractions', desc: 'Lets go to the movie?' })
     }
   }
 }
