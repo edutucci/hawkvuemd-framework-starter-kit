@@ -3476,9 +3476,9 @@ hash.js@^1.0.0, hash.js@^1.0.3:
     inherits "^2.0.3"
     minimalistic-assert "^1.0.1"
 
-hawkframework@^0.0.7:
-  version "0.0.7"
-  resolved "https://registry.yarnpkg.com/hawkframework/-/hawkframework-0.0.7.tgz#89912f6fb06ad96f7badb58025dd09023206d190"
+hawkframework@^0.0.10:
+  version "0.0.10"
+  resolved "https://registry.yarnpkg.com/hawkframework/-/hawkframework-0.0.10.tgz#2815b3d15cbdf01b9e922f90b3e5640d25c65d74"
   dependencies:
     "@fortawesome/fontawesome-svg-core" "^1.2.4"
     "@fortawesome/free-brands-svg-icons" "^5.3.1"

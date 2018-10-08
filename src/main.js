@@ -6,7 +6,6 @@ import store from './store'
 import './registerServiceWorker'
 
 import './themes/index.styl'
-import 'hawkframework/dist/components.styl'
 import 'hawkframework'
 import 'hawkframework/dist/hawkframework.css'
 
