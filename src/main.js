@@ -1,20 +1,13 @@
-
 import Vue from 'vue'
 import App from './App.vue'
+import './registerServiceWorker'
 import router from './router'
 import store from './store'
-import './registerServiceWorker'
 
-import './themes/index.styl'
-import 'hawkframework'
-import 'hawkframework/dist/hawkframework.css'
-
-import VueAwesomeSwiper from 'vue-awesome-swiper'
-
-// require styles
-import 'swiper/dist/css/swiper.css'
-
-Vue.use(VueAwesomeSwiper)
+import 'hawkvuemd'
+import 'hawkvuemd/dist/hawk_default_stylus.styl'
+// import './customStyle.styl'
+import 'hawkvuemd/dist/hawkvuemd.css'
 
 Vue.config.productionTip = false
 
