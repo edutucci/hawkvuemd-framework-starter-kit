@@ -8,8 +8,9 @@
         <h-app-toolbar bg-color="bg-primary">
           <h-app-toolbar-container>
             <h-app-toolbar-navigation text-color="text-white" @click="showDrawer = !showDrawer"/>
+            <h-image avatar src="img/hawk.jpg" size="42px"/>
             <h-app-toolbar-title class="text-white">
-              HawkVueMD Framework 1.0.12-rc.0
+              HawkVueMD Framework
             </h-app-toolbar-title>
             <h-app-toolbar-action>
               <h-btn fab size="sm" bg-color="bg-transparent">

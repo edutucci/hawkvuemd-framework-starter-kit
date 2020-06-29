@@ -9,7 +9,7 @@
   },
   "dependencies": {
     "core-js": "^3.6.4",
-    "hawkvuemd": "^1.0.12-rc.0",
+    "hawkvuemd": "^1.0.12-beta.1",
     "register-service-worker": "^1.7.1",
     "vue": "^2.6.11",
     "vue-router": "^3.1.6",
