@@ -5,8 +5,12 @@ Vue.use(VueRouter)
 
 const routes = [
   {
-    path: '/home',
-    component: () => import('../views/Home.vue')
+    path: '/',
+    component: () => import('../layouts/mainLayout.vue'),
+    children: [
+      { path: '', component: () => import('../views/Home.vue') },
+      { path: 'about', component: () => import('../views/About.vue') }
+    ]
   }
 ]
 
